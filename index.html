@@ -14,10 +14,10 @@
         function handleSubmit(event) {
             event.preventDefault(); // Prevent page refresh
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const summary = document.getElementById('summary').value; // Correct the variable name here
 
-            if (name && email) {
-                alert(`Hi ${name}, thank you for logging in from ${email}`);
+            if (name && summary) {
+                alert(`Hi ${name}, thank you for logging in with your summary: ${summary}`);
                 document.getElementById('redirectBtn').style.display = 'block';
             } else {
                 alert('Please fill out both fields.');
@@ -36,8 +36,8 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Summary:</label>
-            <input type="textarea" id="email" name="summary" placeholder="Enter Summary" required>
+            <label for="summary">Summary:</label> <!-- Updated for consistency -->
+            <textarea id="summary" name="summary" placeholder="Enter Summary" required></textarea> <!-- Updated id to "summary" -->
 
             <button type="submit">Submit</button>
         </form>
